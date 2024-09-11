@@ -1,0 +1,11 @@
+#pod to providing network access and network configuration
+apiVersion: v1
+kind: Service
+metadata:
+  name: yoga-service
+spec:
+  type: LoadBalancer
+  selector:
+     app: yoga-api
+  ports:
+  - port: 5000
